@@ -20,24 +20,28 @@ search_ip_txt_file.close()
 for i in ip_array:
     with urlopen("http://ipwhois.app/json/" + i) as response:
         source = response.read()
+        data = json.loads(source)
 
-    data = json.loads(source)
+        #Error Checking - Check to see if the URL request was good
+        success = json.dumps(data['success'])
+        if success == "false":
+            pass
+        else:
+            #pull values from the json keys and set to variables
+            country_json = json.dumps(data['country'])
+            ip_json = json.dumps(data['ip'])
+            ip_asn = json.dumps(data['asn'])
+            ip_org = json.dumps(data['org'])
+            ip_isp = json.dumps(data['isp'])
 
-    #pull values from the json keys and set to variables
-    country_json = json.dumps(data['country'])
-    ip_json = json.dumps(data['ip'])
-    ip_asn = json.dumps(data['asn'])
-    ip_org = json.dumps(data['org'])
-    ip_isp = json.dumps(data['isp'])
+            #strip double quotes from the strings from some variables
+            #I commented out the strip from a couple others
+            #I want to past this into excel for further analysis and sharing
+            country = country_json.strip('"')
+            ip = ip_json.strip('"')
+            asn = ip_asn.strip('"')
+            #org = ip_org.strip('"')
+            #isp = ip_isp.strip('"')
 
-    #strip double quotes from the strings from some variables
-    #I commented out the strip from a couple others
-    #I want to past this into excel for further analysis and sharing
-    country = country_json.strip('"')
-    ip = ip_json.strip('"')
-    asn = ip_asn.strip('"')
-    #org = ip_org.strip('"')
-    #isp = ip_isp.strip('"')
-
-    #print(ip,country,asn,org,isp)
-    print(ip + "," + country + "," + asn + "," + ip_org + "," + ip_isp)
+            #print(ip,country,asn,org,isp)
+            print(ip + "," + country + "," + asn + "," + ip_org + "," + ip_isp)

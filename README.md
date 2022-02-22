@@ -14,9 +14,9 @@ Designed to query ASN, Organization Name, and ISP and then print it to the conso
 
 Ex Input:
 
-117.195.80.248
-41.232.226.134
-117.201.207.122
+117.195.80.248 
+41.232.226.134 
+117.201.207.122 
 79.113.38.177
 
 Ex Output:

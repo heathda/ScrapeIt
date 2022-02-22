@@ -2,7 +2,6 @@
 #Can be used to quickly determine a best guess on IP origin
 #Uses the IPWHOIS.app API - 50,000 queries a month (free tier)
 
-
 import json
 from urllib.request import urlopen
 
@@ -27,21 +26,17 @@ for i in ip_array:
         if success == "false":
             pass
         else:
-            #pull values from the json keys and set to variables
+            #Pull values from the json keys and set to variables
             country_json = json.dumps(data['country'])
             ip_json = json.dumps(data['ip'])
             ip_asn = json.dumps(data['asn'])
             ip_org = json.dumps(data['org'])
             ip_isp = json.dumps(data['isp'])
 
-            #strip double quotes from the strings from some variables
-            #I commented out the strip from a couple others
-            #I want to past this into excel for further analysis and sharing
+            #Strip double quotes from a couple variables
             country = country_json.strip('"')
             ip = ip_json.strip('"')
             asn = ip_asn.strip('"')
-            #org = ip_org.strip('"')
-            #isp = ip_isp.strip('"')
-
+            
             #print(ip,country,asn,org,isp)
             print(ip + "," + country + "," + asn + "," + ip_org + "," + ip_isp)

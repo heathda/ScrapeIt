@@ -6,7 +6,7 @@ IP reconnaissance tools.
 ### ipwhois.py - Quickly determine a best guess on IP origin
 Designed to query ASN, Organization Name, and ISP and then print it to the console so it can be easily copy/imported into excel.
 
-####Directions
+#### Directions
 
 
 Ex Input:

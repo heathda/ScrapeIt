@@ -13,15 +13,15 @@ Designed to query Country, ASN, Organization Name, and ISP and then print it to 
 
 Ex Input:
 
-117.195.80.248  
+185.220.101.49  
 41.232.226.134  
-117.201.207.122  
+23.129.64.214  
 79.113.38.177  
 
 
 Ex Output:
 
-117.195.80.248,India,AS9829,"Broadband Multiplay Project, O/o DGM BB, NOC BSNL Bangalore","National Internet Backbone"  
+185.220.101.49,Germany,AS60729,"Zwiebelfreunde e.V","Zwiebelfreunde e.V."  
 41.232.226.134,Egypt,AS8452,"TE Data","Te-As"  
-117.201.207.122,India,AS9829,"Broadband Multiplay Project, O/o DGM BB, NOC BSNL Bangalore","National Internet Backbone"  
+23.129.64.214,United States,AS396507,"Emerald Onion","Emerald Onion"  
 79.113.38.177,Romania,AS8708,"RCS & RDS Business","Rcs & Rds Sa"  

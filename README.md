@@ -2,12 +2,12 @@
 
 
 
-## ipwhois.py - Quickly determine a best guess on IP origin
+### ipwhois.py - Quickly determine a best guess on IP origin
 Designed to query ASN, Organization Name, and ISP and then print it to the console so it can be easily copy/imported into excel.
 
-#### Directions
+##### Directions
 - Create a file called search_ips.txt.
-- Paste a single IP address on each line without any CIDR - No IP ranges
+- Paste a single IP address on each line.  No CIDR. No IP ranges
 - Run ipwhois.py in the same directory as search_ips.txt
 
 
